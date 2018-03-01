@@ -1,5 +1,5 @@
 # Vue.js implementation
 
-- A
-
-- B
+- Introducing Vue (Getting Started)
+- Vue Instance
+- Vue-cli (my-project)
