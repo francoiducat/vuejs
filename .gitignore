@@ -1,0 +1,5 @@
+./my-project/node_modules
+./my-project/build
+./my-project/.idea
+./my-project/dist
+./my-project/package.json

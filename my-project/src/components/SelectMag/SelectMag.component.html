@@ -1,0 +1,9 @@
+
+<section class="select-mag">
+  <h1>Choose your Store</h1>
+  <select id="select-mag" v-model="selectedStore" @change="changeStore">
+    <option v-for="store in storesList" :value="store">
+      {{store.name}}
+    </option>
+  </select>
+</section>
