@@ -9,9 +9,33 @@
 
 <body>
 <div id="app">
-  <h1>{{message}}</h1>
+  <h1>Vue instance</h1>
+  <p>
+    Every Vue application starts by creating a new Vue instance with the Vue function
+  </p>
+  <p>
+    The created hook can be used to run code after an instance is created. (See Console LOGS)
+  </p>
+  <h1>v-once</h1>
+  <p>
+    One-time interpolations that do not update on data change by using the <b>v-once</b> directive. This will also affect any other bindings on the same node.
+  </p>
+  <p v-once>
+    This will message won't change : {{ message }}
+  </p>
+  <p>
+    This will message will change : {{ message }}
+  </p>
+  <p>
+    > try app.message = 'toto'
+  </p>
+  <h1>v-html</h1>
+  <p>Raw HTML :  {{ html}}</p>
+  <p>Rendered HTML : <span v-html="html"></span></p>
+  <h1>Computed property</h1>
+  <p>Original message: "{{ message }}"</p>
+  <p>Computed reversed message: "{{ reverseMessage }}"</p>
 </div>
-
 
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <script src="./script.js"></script>

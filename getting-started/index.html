@@ -9,12 +9,18 @@
 
 <body>
   <h1>Welcome Message</h1>
+  <p>
+    The data and the DOM are now linked. Vue.js declaratively bind the rendered DOM to the underlying Vue instance’s data
+  </p>
   <div id="app">
     {{ message }}
   </div>
 
   <div id="app-2">
     <h1>v-bind or :</h1>
+    <p>
+      Curly braces canno't be used inside HTML tags.
+    </p>
     <span :title="message">
     Hover your mouse over me for a few seconds
     to see my dynamically bound title!
@@ -39,7 +45,7 @@
   </div>
 
   <div id="app-5">
-    <h1>v-on:click</h1>
+    <h1>v-on:click or @:click</h1>
 
   <p>{{ message }}</p>
   <button v-on:click="reverseMessage">Reverse Message</button>
