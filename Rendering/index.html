@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<HTML>
+
+<HEAD>
+  <meta charset="utf-8">
+  <TITLE>getting started vue.js</TITLE>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</HEAD>
+
+<body>
+<div id="app">
+  <h1>Conditional Rendering</h1>
+  <h1 v-if="ok">Yes</h1>
+  <h1 v-else>No</h1>
+  <template v-if="ok">
+  <h1>Title</h1>
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+</template>
+<h1 v-show="show">Hello!</h1>
+<h1>v-for Array</h1>
+<ul>
+  <li v-for="item in items" :key="item.message">{{ item.message }}</li>
+</ul>
+<h1>v-for Object</h1>
+<h2>with one argument</h2>
+<ul>
+  <li v-for="value in object">
+    {{ value }}
+  </li>
+</ul>
+<h2>with 2nd argument key</h2>
+<ul>
+  <li v-for="(value, key) in object">
+    {{ key }} : {{ value }}
+  </li>
+</ul>
+<h1>Filtering</h1>
+<li v-for="n in evenNumbers">{{ n }}</li>
+<li v-for="n in even(numbers)">{{ n }}</li>
+<h1>v-for with integer</h1>
+
+<div>
+  <span v-for="n in 10">{{ n }} </span>
+</div>
+
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="./script.js"></script>
+
+
+</body>
+
+</HTML>
