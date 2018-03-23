@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>counter</title>
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <label>Enter your Name : </label>
+      <input type="text" v-model="firstname"/>
+      <p>
+        Your name is : {{ firstname }}
+      </p>
+      <label>Enter a new activity : </label>
+      <input type="text" v-model="activity" v-on:keydown.enter='createNewActivity'/>
+      <p>
+        Your new activity is : {{ activity }}
+      </p>
+      <p>Your activites are :  </p>
+      <ul>
+        <li v-for="activity in activities">{{activity}}</li>
+      </ul>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

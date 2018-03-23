@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>rerendering</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  </head>
+  <body>
+
+<div id="app">
+  <h1> {{ title }}</h1>
+  <p v-on:mousemove="updateCoordinates"> Coordinates : {{x}} / {{y}} </p>
+  <p>
+    {{sayHello()}}
+  </p>
+  <button v-on:click="increase(2)">Click Me</button>
+  <p>Counter : {{ counter }}</p>
+</div>
+
+<script>
+new Vue({
+  el:'#app',
+  data: {
+    title: 'Hello',
+    x: 0,
+    y: 0,
+    counter: 0
+  },
+  methods: {
+    updateCoordinates: function(event) {
+      this.x = event.clientX;
+      this.y = event.clientY;
+    },
+    increase: function(step) {
+      this.counter += step;
+    },
+    sayHello: function() {
+      return this.title;
+    }
+  }
+})
+
+</script>
+
+  </body>
+</html>
