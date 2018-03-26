@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+
+  </head>
+  <body>
+
+    <div id="app">
+      {{ message }}
+
+      <p v-if="show">You see me</p>
+      <p v-else>V-ELSE you see me</p>
+      <template v-if="show">
+        <p>
+          Inside a template
+        </p>
+      </template>
+      <p v-show="show">
+        Do you see me v-show ?
+      </p>
+      <button type="button" @click="show = !show">Switch</button>
+    </div>
+
+    <script>
+    new Vue({
+      el:"#app",
+      data: {
+        message : "Hello boss",
+        show: true,
+
+      }
+    })
+    </script>
+  </body>
+</html>
