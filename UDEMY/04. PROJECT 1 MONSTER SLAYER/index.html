@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+    <meta charset="ISO-8859-1">
     <title>Monster Slayer</title>
     <script src="https://npmcdn.com/vue/dist/vue.js"></script>
     <link rel="stylesheet" href="css/foundation.min.css">
@@ -43,12 +45,11 @@
             <button id="give-up" @click="giveUp">GIVE UP</button>
         </div>
     </section>
-    <section class="row log">
+    <section class="row log"  v-if="turns.length > 0">
         <div class="small-12 columns">
             <ul>
-                <li>
-
-                </li>
+                <li
+                v-for="turn in turns">{{turns.text}}</li>
             </ul>
         </div>
     </section>
