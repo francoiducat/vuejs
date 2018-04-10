@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>components</title>
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+
+  </head>
+  <body>
+
+
+
+<div id="app">{{title}}
+<button type="button" name="button"
+@click="title = 'Changed'">Update title</button>
+<button type="button" name="button"
+@click="destroy">Destroy</button>
+</div>
+
+
+
+  <script>
+
+let vm = new Vue({
+  el: '#app',
+  data: {
+    title: "vue js instance"
+  },
+  beforeCreate: function() {
+    //do something before creating vue instance
+    console.log("beforeCreate")
+  },
+  created() {
+    //do something after creating vue instance
+    console.log("created")
+  },
+  beforeMount() {
+    //do something before creating vue instance
+    console.log("beforeMount")
+  },
+  mounted() {
+    //do something after creating vue instance
+    console.log("mounted")
+  },
+  beforeUpdate() {
+    //do something after creating vue instance
+    console.log("before update")
+  },
+  updated() {
+    //do something after creating vue instance
+    console.log("updated")
+  },
+  beforeDestroy() {
+    //do something before destroying vue instance
+    console.log("beforeDestroy")
+  },
+  destroyed() {
+    //do something after destroying vue instance
+    console.log("destroyed")
+  },
+  methods: {
+    destroy:function() {
+      this.$destroy();
+    }
+  }
+})
+
+
+    </script>
+
+  </body>
+</html>
