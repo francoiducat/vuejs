@@ -1,5 +1,13 @@
-# Vue.js implementation
+# Vue.js from scratch
 
-- Introducing Vue (Getting Started)
-- Vue Instance
-- Vue-cli (my-project)
+
+## Tutorials from the web
+
+See ALL_TUTOS folder
+
+
+## Full Course from Udemy
+
+Course Name 'Vuejs 2 the complete guide (including Vue Router & Vuex)'
+
+See UDEMY folder
