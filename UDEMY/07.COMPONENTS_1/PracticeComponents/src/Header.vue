@@ -1,0 +1,15 @@
+<template>
+<div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Server Status</h1>
+    </div>
+  </div>
+  <hr>
+</div>
+</template>
+<script>
+
+</script>
+<style>
+</style>
