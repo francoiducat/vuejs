@@ -11,14 +11,7 @@
                     <!-- Store Data? Yes/No -->
                     <h1>Form Exercice</h1>
                     <hr>
-                    <div class="form-group">
-                        <label for="fullname">Fullname</label>
-
-                        <input type="text"
-                               id="fullname"
-                               class="form-control"
-                               v-model="userData.fullName">
-                    </div>
+                    <full-name v-model="userData.fullName"></full-name>
                     <div class="form-group">
                         <label for="mail">mail</label>
 
@@ -35,16 +28,21 @@
                                class="form-control"
                                v-model="userData.password">
                     </div>
+                    <div class="form-group">
 
 
-                    <label>
-                        <input type="radio" value="yes" v-model="userData.storeData">Yes
-                        <input type="radio" value="no" v-model="userData.storeData">No
-                    </label>
+                        <label>
+                            <input type="radio" value="yes" v-model="userData.storeData">Yes
+                        </label>
+                        <label>
+                            <input type="radio" value="no" v-model="userData.storeData">No
+                        </label>
+                    </div>
                     <button
                             type="submit"
                             @click.prevent="userData.submitted = true"
-                            class="btn btn-primary">Submit</button>
+                            class="btn btn-primary">Submit
+                    </button>
 
                 </div>
 
@@ -71,7 +69,7 @@
                         <h4>Your Data</h4>
                     </div>
                     <div class="panel-body">
-                        <p>Full Name: {{ userData.fullName}}</p>
+                        <p>Full Name: {{ userData.fullName }}</p>
                         <p>Mail: {{ userData.mail}}</p>
                         <p>Password: {{ userData.password}}</p>
                         <p>Store in Database?: {{ userData.storeData}}</p>
@@ -83,22 +81,22 @@
 </template>
 
 <script>
+
+    import FullName from "./FullName.vue";
+
     export default {
+        components: {FullName},
         data () {
             return {
                 userData: {
-                    fullName: '',
+                    fullName:'Francois Ducatillon',
                     mail: '',
                     password: '',
                     storeData: false,
                     submitted: false
-                },
-                isDataStored: false
-
+                }
             }
-
         }
-
     }
 </script>
 
