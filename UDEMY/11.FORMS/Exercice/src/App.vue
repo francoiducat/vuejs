@@ -81,7 +81,7 @@
 </template>
 
 <script>
-    import FullName from "./FullName.vue";
+    import FullName from "./FullName.vue"
 
     export default {
         components: {FullName},
