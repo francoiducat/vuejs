@@ -3,3 +3,7 @@ build/
 dist/
 .idea
 vuejs.iml
+
+**/dist/
+**/build/
+**/public/
